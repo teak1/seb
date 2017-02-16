@@ -5,6 +5,5 @@ function setup(){
 
 function draw(){
   bgColor++;
-  var r=255,g=255,b=255;
-  background(gbColor%123,bgColor%456,bgColor%789);
+  background(gbColor,bgColor,bgColor);
 }
