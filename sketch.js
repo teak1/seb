@@ -4,7 +4,7 @@ var bgColor = 0;
 function setup(){
   createCanvas(400,400);
   player = {
-    pos:createVector(200,200);
+    pos:createVector(200,200)
   }
 }
 function onkeyup(e){
