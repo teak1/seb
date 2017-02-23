@@ -9,11 +9,11 @@ var keys = {};
 // }
 function onkeyup(e){
   console.log(e.key.toUpperCase());
-  keys[e.key.toUpperCase()]=true;
+  keys[e.key.toUpperCase()]=false;
 }
 function onkeydown(e){
   console.log(e.key.toUpperCase());
-  keys[e.key.toUpperCase()]=false;
+  keys[e.key.toUpperCase()]=true;
 }
 // function draw(){
 //   background(51);
