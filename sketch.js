@@ -7,10 +7,6 @@ function setup(){
     pos:createVector(200,200)
   }
 }
-function onkeyup(e){
-  console.log(e.key.toUpperCase());
-  keys[e.key.toUpperCase()]=false;
-}
 function keyReleased(e) {
   console.log(e.key.toUpperCase());
   keys[e.key.toUpperCase()]=false;
@@ -22,10 +18,10 @@ function keyPressed(e){
 function draw(){
   background(51);
   if(keys.W){
-    player.pos.x--;
+    player.pos.y--;
   }
   if(keys.S){
-    player.pos.x++;
+    player.pos.y++;
   }
   if(keys.A){
     player.pos.x--;
