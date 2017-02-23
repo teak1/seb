@@ -29,6 +29,6 @@ function draw(){
   if(keys.D){
     player.pos.x++;
   }
-  fill(255,255,255);
+  fill(random(255),random(255),random(255));
   rect(player.pos.x,player.pos.y,10,10);
 }
