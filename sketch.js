@@ -1,4 +1,4 @@
-// var keys = {};
+var keys = {};
 // var player = {};
 // var bgColor = 0;
 // function setup(){
@@ -7,14 +7,14 @@
 //     pos:createVector(200,200)
 //   }
 // }
-// function onkeyup(e){
-//   console.log(e.key.toUpperCase());
-//   keys[e.key.toUpperCase()]=true;
-// }
-// function onkeydown(e){
-//   console.log(e.key.toUpperCase());
-//   keys[e.key.toUpperCase()]=false;
-// }
+function onkeyup(e){
+  console.log(e.key.toUpperCase());
+  keys[e.key.toUpperCase()]=true;
+}
+function onkeydown(e){
+  console.log(e.key.toUpperCase());
+  keys[e.key.toUpperCase()]=false;
+}
 // function draw(){
 //   background(51);
 //   if(keys.W){
