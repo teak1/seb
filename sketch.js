@@ -1,12 +1,12 @@
 var keys = {};
-// var player = {};
-// var bgColor = 0;
-// function setup(){
-//   createCanvas(400,400);
-//   player = {
-//     pos:createVector(200,200)
-//   }
-// }
+var player = {};
+var bgColor = 0;
+function setup(){
+  createCanvas(400,400);
+  player = {
+    pos:createVector(200,200)
+  }
+}
 function onkeyup(e){
   console.log(e.key.toUpperCase());
   keys[e.key.toUpperCase()]=false;
@@ -32,3 +32,16 @@ function onkeydown(e){
 //   fill(255,255,255);
 //   rect(player.pos.x,player.pos.y,10,10);
 // }
+var value = 0;
+function draw() {
+  fill(value);
+  rect(25, 25, 50, 50);
+}
+function keyReleased() {
+  if (value === 0) {
+    value = 255;
+  } else {
+    value = 0;
+  }
+  return false; // prevent any default behavior
+}
