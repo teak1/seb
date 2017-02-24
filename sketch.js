@@ -15,18 +15,6 @@ function keyPressed(e){
 }
 function draw(){
   background(51);
-  if(keys.W){
-    player.pos.y--;
-  }
-  if(keys.S){
-    player.pos.y++;
-  }
-  if(keys.A){
-    player.pos.x--;
-  }
-  if(keys.D){
-    player.pos.x++;
-  }
-  fill(random(255),random(255),random(255));
-  rect(player.pos.x,player.pos.y,10,10);
+  player.move();
+  player.show();
 }
