@@ -3,9 +3,7 @@ var player = {};
 var bgColor = 0;
 function setup(){
   createCanvas(400,400);
-  player = {
-    pos:createVector(200,200)
-  }
+  player = new Player(width/2,height/2);
 }
 function keyReleased(e) {
   console.log(e.key.toUpperCase());
