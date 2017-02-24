@@ -1,10 +1,11 @@
 var keys = {};
 var player = {};
 var bgColor = 0;
-var obs = [new Obstical(0,0,40,40)];
+var obs; 
 function setup(){
   createCanvas(400,400);
   player = new Player(width/2,height/2);
+  obs = [new Obstical(0,0,40,40)];
 }
 function keyReleased(e) {
   console.log(e.key.toUpperCase());
