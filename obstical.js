@@ -4,7 +4,9 @@ function Obstical(x,y,w,h){
 }
 Obstical.prototype = Object.assign(Obstical.prototype,{
   show(){
-    //seby, your turn
+    fill(255,0,0);
+    rect(this.pos.x,this.pos.y,this.size.x,this.size.y)
+    
   },
   getBoundingBox(){
     //same as above comment.
