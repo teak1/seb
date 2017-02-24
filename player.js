@@ -18,6 +18,10 @@ Player.prototype,
     if(keys.D||keys.ARROWRIGHT){
       this.pos.x+=this.speed;
     }
+  },
+  show(){
+    fill(255);
+    rect(this.pos.x-5,this.pos.y-5,10,10);
   }
 }
 );
