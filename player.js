@@ -31,7 +31,8 @@ Player.prototype,
   }
 }
 );
-function checkCollision(p,offset){ 
+function checkCollision(pp,offset){
+  var p = pp;
     for(var i = 0;i<p.obs.length;i++){
       var current = p.obs[i];
       var t = {pos:p.pos.add(offset),size:p.size}
