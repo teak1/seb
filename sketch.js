@@ -5,7 +5,11 @@ var obs;
 function setup(){
   createCanvas(400,400);
   player = new Player(width/2,height/2);
-  obs = [new Obstical(0,0,40,40)];
+  obs = [];
+  var max = 5;
+  for(var i = 0;i<max;i++){
+    obs.push(new Obstical(random(360),random(360),40,40));
+  }
 }
 function keyReleased(e) {
   console.log(e.key.toUpperCase());
