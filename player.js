@@ -10,7 +10,7 @@ Player.prototype,
   move(){
     this.obs = obs;
     if(keys.W||keys.ARROWUP){
-      if(this.checkCollision(createVector(0,-this.speed))){
+      if(checkCollision(this,createVector(0,-this.speed))){
         this.pos.y-=this.speed;
       }
     }
@@ -29,10 +29,12 @@ Player.prototype,
     fill(255);
     rect(this.pos.x-5,this.pos.y-5,this.size.x,this.size.y);
   }
-  , checkCollison(offset){ 
-    for(var i = 0;i<this.obs.length;i++){
-      var current = this.obs[i];
-      var t = {pos:this.pos.add(offset),size:this.size}
+}
+);
+function checkCollison(p,offset){ 
+    for(var i = 0;i<p.obs.length;i++){
+      var current = p.obs[i];
+      var t = {pos:p.pos.add(offset),size:p.size}
       var cBB = current.getBoundingBox();
       if(t.pos.x+t.size.x>cBB.pos.x&&
         cBB.pos.x+cBB.size.x<t.pos.x&&
@@ -42,6 +44,4 @@ Player.prototype,
       }
     }
     return false;
-  }
 }
-);
