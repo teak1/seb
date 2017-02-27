@@ -10,5 +10,6 @@ Obstical.prototype = Object.assign(Obstical.prototype,{
   },
   getBoundingBox(){
     //same as above comment.
+    return {pos:this.pos,size:this.size};
   }
 });
