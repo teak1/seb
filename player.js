@@ -35,12 +35,14 @@ function checkCollision(pp,offset){
   var p = pp;
     for(var i = 0;i<p.obs.length;i++){
       var current = p.obs[i];
-      var t = {pos:p.pos.add(offset),size:p.size}
+      var t = {pos:p.pos.copy().add(offset),size:p.size}
       var cBB = current.getBoundingBox();
+      //this.x+this.w>other.x && this.x<other.x+other.w && this.y+this.h>other.y && this.y < other.y+other.h
+      //this.x+this.w>other.x && this.x<other.x+other.w && this.y+this.h>other.y && this.y < other.y+other.h
       if(t.pos.x+t.size.x>cBB.pos.x&&
-        cBB.pos.x+cBB.size.x<t.pos.x&&
+        cBB.pos.x+cBB.size.x>t.pos.x&&
         t.pos.y+t.size.y>cBB.pos.y&&
-        cBB.pos.y+cBB.size.y<t.pos.y ){
+        cBB.pos.y+cBB.size.y>t.pos.y ){
         return true;
       }
     }
