@@ -4,6 +4,7 @@ function Player(x,y,speed){
   this.size = createVector(10,10);
   this.obs;
 }
+var t;
 Player.prototype = Object.assign(
 Player.prototype,
 {
@@ -35,7 +36,7 @@ function checkCollision(pp,offset){
   var p = pp;
     for(var i = 0;i<p.obs.length;i++){
       var current = p.obs[i];
-      var t = {pos:p.pos.copy().add(offset),size:p.size}
+      t = {pos:p.pos.copy().add(offset),size:p.size}
       var cBB = current.getBoundingBox();
       //this.x+this.w>other.x && this.x<other.x+other.w && this.y+this.h>other.y && this.y < other.y+other.h
       //this.x+this.w>other.x && this.x<other.x+other.w && this.y+this.h>other.y && this.y < other.y+other.h
